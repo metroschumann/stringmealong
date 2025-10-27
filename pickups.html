@@ -10,7 +10,8 @@
         padding:30px;
         margin-bottom: 10px;
     }
-    .divstandard {
+    /*Standard paragraph style*/
+    .divstandard { 
         margin: 0 auto;
         max-width:900px;
         padding-left: 2rem;
@@ -31,9 +32,40 @@
         display: block;
         clear: both;
     }
+
+    /*Image orientations*/
+    .center-container {
+        display: flex;
+        justify-content: center; 
+        gap: 250px;
+    }
+
+    .center-container img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px; 
+    }
+
+    .audio-image {
+        cursor: pointer;
+        outline: 2px solid black;
+    }
+
+    .audio-figure {
+        position:relative;
+        display:inline-block;
+        text-align:center;
+    }
+
+    .audio-figcaption {
+        position:absolute;
+        top: -40px;
+    }
+
     .betweenparagraphs {
         margin-top: 60px;
     }
+
 </style>
 </head>
 <!--Header/title segment-->
@@ -46,27 +78,41 @@
 
 <!--First section - basics of pickups-->
     <div class="divstandard">
-        <h3> The basics of guitar pickups</h3>
-        <img class="istandardleft"; src="singlecoilpickup.jpg" width="360" height="264">
-        <p id = "test"> If an electric guitar is a painting, then its pickups are the paint. They are responsible for the existence of a guitar's sound characteristics while also determining the colour, depth and consistency of its audio signature. For tone-chasers, professional touring musicians, studio wizards and everything in between, having the right pickup models and arrangement is extremely important. </p>
-        <p> If you’ve ever played an electric guitar with the volume knob on its body turned all the way down, you’d know it has the same twangy, thin sound as if it were actually unplugged. By turning the dial to zero, you’ve disabled all the pickups in the guitar. Pickups are an important connective piece between the strumming of strings and the noise that actually comes out of an amp or headphones, so without them, nothing happens. </p>
-        <p> Fundamentally, electric guitars are a circuit. The player creates input by plucking or picking the strings, the sound is processed, and then we can hear the output through some sort of speaker. The obvious question mark here is that moving a piece of wire around doesn’t normally create voltage or current, two necessary parts of a circuit. That’s where pickups come in. </p>
-        <button onclick="testFunc()"> test me </button>
+        <h3>The basics of guitar pickups</h3>
+        <img src=singlecoilpickup.jpg" width="360" height="264">
+        <p>If an electric guitar is a painting, then its pickups are the paint. They are responsible for the existence of a guitar's sound characteristics while also determining the colour, depth and consistency of its audio signature. For tone-chasers, professional touring musicians, studio wizards and everything in between, having the right pickup models and arrangement is extremely important. </p>
+        <p>If you’ve ever played an electric guitar with the volume knob on its body turned all the way down, you’d know it has the same twangy, thin sound as if it were actually unplugged. By turning the dial to zero, you’ve disabled all the pickups in the guitar. Pickups are an important connective piece between the strumming of strings and the noise that actually comes out of an amp or headphones, so without them, nothing happens. </p>
+        <p>Fundamentally, electric guitars are a circuit. The player creates input by plucking or picking the strings, the sound is processed, and then we can hear the output through some sort of speaker. The obvious question mark here is that moving a piece of wire around doesn’t normally create voltage or current, two necessary parts of a circuit. That’s where pickups come in. </p>
     </div>
     <div class="divstandard">
-        <img src="singlecoildiagram.webp" style=" float: right" width="330" height="253">
-        <p> Guitar pickups utilize a physical electromagnetic rule called Faraday’s Law of Electromagnetic Induction, which states that “a changing magnetic field induces a voltage in a circuit”. This allows pickups, which are essentially magnets coiled with a copper wire, to generate a voltage. This principle is demonstrated in Figure 1, an official diagram of a Seymour-Duncan single coil pickup. </p>
-        <p> This pickup comprises a main "frame", called a <b>bobbin</b> (the bottom of which is labeled as “Base plate” in the diagram), six <b>bar magnets,</b> (usually neodymium or alnico) and <b>copper wire</b> coiled around the main body. When placed in a guitar, each magnet lies beneath one of the six strings (Figure 3 - insert?) - this allows each string to be “heard” with a good amount of detail. </p>
-        <p> When a string is played, its vibrations interfere with the pickup’s magnetic field as per Faraday’s Law of Electromagnetic Induction. This creates a voltage with AC (alternating current) inside of the copper coil which mimics the frequency of the string that’s played - it’s almost like the note is “heard” and “recorded” by the pickup in the form of an electrical signal, which is sent and further processed by amplifiers, pedals, and the like. </p>
+        <img src="singlecoildiagram.webp" style="float: right" width="330" height="253">
+        <p>Guitar pickups utilize a physical electromagnetic rule called Faraday’s Law of Electromagnetic Induction, which states that “a changing magnetic field induces a voltage in a circuit”. This allows pickups, which are essentially magnets coiled with a copper wire, to generate a voltage. This principle is demonstrated in Figure 1, an official diagram of a Seymour-Duncan single coil pickup. </p>
+        <p>This pickup comprises a main "frame", called a <b>bobbin</b> (the bottom of which is labeled as “Base plate” in the diagram), six <b>bar magnets,</b> (usually neodymium or alnico) and <b>copper wire</b> coiled around the main body. When placed in a guitar, each magnet lies beneath one of the six strings (Figure 3 - insert?) - this allows each string to be “heard” with a good amount of detail. </p>
+        <p>When a string is played, its vibrations interfere with the pickup’s magnetic field as per Faraday’s Law of Electromagnetic Induction. This creates a voltage with AC (alternating current) inside of the copper coil which mimics the frequency of the string that’s played - it’s almost like the note is “heard” and “recorded” by the pickup in the form of an electrical signal, which is sent and further processed by amplifiers, pedals, and the like. </p>
     </div>
     
 <!--Second section - where to start-->
     <div class="divstandard">
-        <h3> So what do I need to build my first pickup?</h3>
-        <p> The sound profile of a pickup depends on a wide variety of factors - the polarity of the magnets, direction of the coil, and the materials of the components are all examples which have a noticeable impact on a pickup’s sound. However, for now we’ll just aim to understand their composition, not get picky over quality. Our priority is looking at the cheapest and most accessible options. In that vein, single-coil pickups are by far the most common and basic option for a first pickup build. They’re kind of like the prototype for other types of pickups, like humbuckers or P-90s, and also have the least complicated makeup.
-</p>
+        <h3>So what do I need to build my first pickup?</h3>
+        <p>The sound profile of a pickup depends on a wide variety of factors - the polarity of the magnets, direction of the coil, and the materials of the components are all examples which have a noticeable impact on a pickup’s sound. However, for now we’ll just aim to understand their composition, not get picky over quality. Our priority is looking at the cheapest and most accessible options.</p>
+        <p>In that vein, single-coil pickups are by far the most common and basic option for a first pickup build. They’re kind of like the prototype for other types of pickups, like humbuckers or P-90s, and also have the least complicated makeup. However, as we will soon see, even the small details within the same "type" of pickup make a humongous difference. For instance, you can sample the difference between a more standard guitar single-coil and a bass single-coil from Stanford University's sound samples page by clicking the  below:</p>
     </div>
 
+<!--Audio sample section - single coil for now. Want to expand to single coil/humbucker comparison but NEED FILES!!-->
+    <div class = "center-container">
+        <!-- <figure class ="audio-figure"> 
+            <figcaption class="audio-figcaption">Guitar pickup audio sample - click me!</figcaption>-->
+                <img class = "audio-image" src = "audioguitar.png" alt = "Play Sound" width ="190" height = "245" data-sound="stanfordsampleguitar.mp3"><!--</figure>-->
+        <img class = "audio-image" src = audiobass.png" alt = "Play Sound" width ="190" height = "245" data-sound=stanfordsamplebass.mp3">
+    </div>
+
+<!--Third section - Bobbins-->
+    <div class="divstandard">
+        <h3>Bobbins</h3>
+        <p>As the “framework” for the rest of the pickup, the bobbin is the first part of a pickup to make. There are a few ways to approach this.</p>
+        <p>The first option is simply buying a bobbin. Companies like SOLO Music Gear have single-coil bobbins of different dimensions for sale. It is important to ensure the bobbin dimensions (length, width, height, distance between strings etc) all match those of your guitar. These specs can usually be found online or, of course, can be manually measured.</p>
+        <p>As for building a bobbin, there are two main pieces of flatwork - the base plate and the top plate. The top plate is typically a more uniform oval shape, with the bottom plate usually taking on a more trapezoidal shape. The dimensions of the bobbin are very important, and can vary by guitar - but for the purpose of a standalone pickup, standard strat single-coil dimensions are appropriate. Refer to the diagram below from JJ’s Guitar Pickups for single-coil pickups:</p>
+    </div>
 
 <script src="pickups.js"></script>
 </body>
