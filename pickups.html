@@ -65,7 +65,31 @@
     .betweenparagraphs {
         margin-top: 60px;
     }
+    .tableSettings1 {
+        margin-left:auto;
+        margin-right:auto;
+        border-collapse: collapse;
+        border:2px solid black;
+        width: 50%; 
+        font-size:1.2rem;   
+        letter-spacing:1px;
+    }
 
+    .tableSettings1 th, .tableSettings1 td {
+        border:1px solid black;
+        font-size:0.9rem;
+        padding: 8px 10px;
+    }
+
+    .tableSettings1 th {
+        background-color: lightgray;
+    }
+
+    .tableSettings1 th:nth-child(1) {width: 24%}
+    .tableSettings1 th:nth-child(2) {width: 38%}
+    .tableSettings1 th:nth-child(3) {width: 38%}
+
+    
 </style>
 </head>
 <!--Header/title segment-->
@@ -114,8 +138,83 @@
         <p>As for building a bobbin, there are two main pieces of flatwork - the base plate and the top plate. The top plate is typically a more uniform oval shape, with the bottom plate usually taking on a more trapezoidal shape. The dimensions of the bobbin are very important, and can vary by guitar - but for the purpose of a standalone pickup, standard strat single-coil dimensions are appropriate. Refer to the diagram below from JJ’s Guitar Pickups for single-coil pickups:</p>
     </div>
 
+    <div>
+        <table class="tableSettings1">
+            <caption>
+                Bobbin materials list
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col">Material</th>
+                    <th scope="col">Pros</th>
+                    <th scope="col">Cons</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Wood (pine, maple, etc.)</th>
+                    <td>
+                        <ul>
+                            <li>Accessible</li>
+                            <li>Visually interesting</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Vulnerable to humidity warping</li>
+                            <li>Not the most durable</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope = "row">Phenolics</th>
+                    <td>
+                        <ul>
+                            <li>Stable & longlasting</li>
+                            <li>Accessible</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Difficult to cut</li>
+                            <li>Carcinogenic</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope = "row">Nylon</th>
+                    <td>
+                        <ul>
+                            <li>Industry standard</li>
+                            <li>Affordable</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Nothing to note</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope = "row">Vulcanized fibre</th>
+                    <td>
+                        <ul>
+                            <li>Industry standard</li>
+                            <li>Flexible & structurally strong</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Nothing to note</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 <script src="pickups.js"></script>
 </body>
 </html>
+
 
 
