@@ -5,7 +5,9 @@ async function fetchPickups() {
   try {
     const response = await fetch(PICKUPS_JSON);
     if (!response.ok) throw new Error(`Network error: ${response.status}`);
-    return await response.json();
+    const data = await response.json();
+    console.log('lalallala:', data);
+    return(data)
   } catch (err) {
     console.error('Failed to fetch pickups:', err);
     return [];
