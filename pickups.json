@@ -2,13 +2,14 @@
     {
         "id": "scs",
         "name": "Single-coil Standard",
-        "audio": "Images (sma)/stanfordsampleguitar.mp3",
-        "image": "Images (sma)/audioguitar.png"
+        "audio": "stanfordsampleguitar.mp3",
+        "image": "audioguitar.png"
     },
     {
         "id": "scb",
         "name": "Single-coil Bass",
-        "audio": "Images (sma)/stanfordsamplebass.mp3",
-        "image": "Images (sma)/audioguitar.png"
+        "audio": "stanfordsamplebass.mp3",
+        "image": "audioguitar.png"
     }
+
 ]
