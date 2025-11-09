@@ -1,0 +1,15 @@
+[
+    {
+        "id": "scs",
+        "name": "Single-coil Standard",
+        "audio": "stanfordsampleguitar.mp3",
+        "image": "audioguitar.png"
+    },
+    {
+        "id": "scb",
+        "name": "Single-coil Bass",
+        "audio": "stanfordsamplebass.mp3",
+        "image": "audioguitar.png"
+    }
+
+]
