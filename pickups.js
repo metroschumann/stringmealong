@@ -26,7 +26,7 @@ function createButton(pickup) {
   figure.appendChild(caption);
 
   // Ensure we have an images array (avoid crash if JSON missing images)
-  const images = Array.isArray(pickup.images) ? pickup.images : [];
+  const images = pickup.image ? [pickup.image] : [];
 
   images.forEach(src => {
     const img = document.createElement('img');
