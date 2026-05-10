@@ -1,25 +1,32 @@
-// Setting the scene - creating the rendering
+//Importing relevant library (three.js)
+
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.158.0/examples/jsm/loaders/GLTFLoader.js';
+
+//Scene
 const scene = new THREE.Scene();
 
-// Camera settings
+//Camera controls
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
   0.1,
   1000
 );
-camera.position.z = 5;
-console.log(viewer.clientWidth);
-console.log(viewer.clientHeight);
 
-// Renderer - actually rendering
+camera.position.z = 5;
+
+//Renderer
 const renderer = new THREE.WebGLRenderer({ antialias: true });
+
+//Register as viewer
 const viewer = document.getElementById("viewer");
 renderer.setSize(viewer.clientWidth, viewer.clientHeight);
-document.getElementById("viewer").appendChild(renderer.domElement);
+viewer.appendChild(renderer.domElement);
 
 // Controls
-const controls = new THREE.OrbitControls(camera, renderer.domElement);
+const controls = new OrbitControls(camera, renderer.domElement);
 
 // Light
 const light = new THREE.DirectionalLight(0xffffff, 1);
@@ -27,7 +34,7 @@ light.position.set(5, 5, 5);
 scene.add(light);
 
 // Loader
-const loader = new THREE.GLTFLoader();
+const loader = new GLTFLoader();
 
 // Load baseplate
 loader.load('Baseplate.glb', (gltf) => {
