@@ -9,6 +9,8 @@ const camera = new THREE.PerspectiveCamera(
   1000
 );
 camera.position.z = 5;
+console.log(viewer.clientWidth);
+console.log(viewer.clientHeight);
 
 // Renderer - actually rendering
 const renderer = new THREE.WebGLRenderer({ antialias: true });
