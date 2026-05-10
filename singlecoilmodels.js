@@ -28,14 +28,14 @@ scene.add(light);
 const loader = new THREE.GLTFLoader();
 
 // Load baseplate
-loader.load('./models/baseplate.glb', (gltf) => {
+loader.load('Baseplate.glb', (gltf) => {
   const baseplate = gltf.scene;
   baseplate.position.set(-2, 0, 0);
   scene.add(baseplate);
 });
 
 // Load topplate
-loader.load('./models/topplate.glb', (gltf) => {
+loader.load('Topplate.glb', (gltf) => {
   const topplate = gltf.scene;
   topplate.position.set(2, 0, 0);
   scene.add(topplate);
