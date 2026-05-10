@@ -12,7 +12,8 @@ camera.position.z = 5;
 
 // Renderer - actually rendering
 const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
+const viewer = document.getElementById("viewer");
+renderer.setSize(viewer.clientWidth, viewer.clientHeight);
 document.getElementById("viewer").appendChild(renderer.domElement);
 
 // Controls
