@@ -1,7 +1,7 @@
-// Scene
+// Setting the scene - creating the rendering
 const scene = new THREE.Scene();
 
-// Camera
+// Camera settings
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -10,10 +10,10 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.z = 5;
 
-// Renderer
+// Renderer - actually rendering
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+document.getElementById("viewer").appendChild(renderer.domElement);
 
 // Controls
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
